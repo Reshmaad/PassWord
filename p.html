@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form="m-5">
+        
+    <div id="message" class="alert alert-danger" style="display: none;">
+        This is an error message
+    </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="button" class="btn btn-primary" id="btn">Submit</button>
+      </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        const btnsubmit = document.getElementById('btn');
+        btnsubmit.addEventListener('click',handlesubmit)
+        function handlesubmit(){
+           console.log("Enter handlesubmit function");
+            const message = document.getElementById('message');
+            
+          
+            const password = document.getElementById('password').value;
+            message.style.display = "none";
+            
+            if(password.length < 8){
+                message.innerText = "password length must be greater than 8";
+                message.style.display = "block";
+                return false;
+            }
+            
+alert("success")
+        }
+
+    </script>   
+</body>
+</html>
